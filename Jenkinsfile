@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Unit and Integration Tests') {
             steps {
-                echo 'Running unit tests to ensure code functionality'
+                echo 'Running TestNG to ensure code functionality'
                 // Commands to run unit tests would go here
                 echo 'Running integration tests to ensure component interactions'
                 // Commands to run integration tests would go here
@@ -18,31 +18,31 @@ pipeline {
         }
         stage('Code Analysis') {
             steps {
-                echo 'Integrating code analysis tool'
+                echo 'Integrating code analysis tool. Running SonarQube... '
                 // Commands to run code analysis tool would go here
             }
         }
         stage('Security Scan') {
             steps {
-                echo 'Performing security scan on the code'
+                echo 'Performing security scan on the code. Running OWASP ZAP... '
                 // Commands to run security scan tool would go here
             }
         }
         stage('Deploy to Staging') {
             steps {
-                echo 'Deploying the application to staging server'
+                echo 'Deploying the Jenkins Deploy Plugin to staging server'
                 // Commands to deploy to staging server would go here
             }
         }
         stage('Integration Tests on Staging') {
             steps {
-                echo 'Running integration tests on staging environment'
+                echo 'Running Selenium on staging environment'
                 // Commands to run integration tests on staging would go here
             }
         }
         stage('Deploy to Production') {
             steps {
-                echo 'Deploying the application to production server'
+                echo 'Deploying Jenkins Deploy Plugin'
                 // Commands to deploy to production server would go here
             }
         }
