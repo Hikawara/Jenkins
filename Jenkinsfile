@@ -83,6 +83,5 @@ pipeline {
                          smtpUser: 'swanhtetnaingatwork@gmail.com',
                          smtpPassword: 'uaaz tlrt hsra zkze'
             }
-        }
     }
 }
