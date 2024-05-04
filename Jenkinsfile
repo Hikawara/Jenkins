@@ -50,18 +50,38 @@ pipeline {
 
     post {
         success {
-            echo 'Pipeline successfully completed!'
             emailext body: 'Pipeline successfully completed!',
                      subject: 'Pipeline Status: Success',
                      to: 'swanhtetnaingatwork@gmail.com',
-                     attachmentsPattern: '**/*'
+                     attachmentsPattern: '**/*',
+                     mimeType: 'text/plain',
+                     replyTo: 'swanhtetnaingatwork@gmail.com',
+                     from: 'swanhtetnaingatwork@gmail.com',
+                     mailer: [
+                        smtpHost: 'smtp.gmail.com',
+                        smtpPort: '587',
+                        ssl: true,
+                        smtpAuth: true,
+                        smtpUser: 'swanhtetnaingatwork@gmail.com',
+                        smtpPassword: 'uaaz tlrt hsra zkze'
+                     ]
         }
         failure {
-            echo 'Pipeline failed!'
             emailext body: 'Pipeline failed!',
                      subject: 'Pipeline Status: Failure',
                      to: 'swanhtetnaingatwork@gmail.com',
-                     attachmentsPattern: '**/*'
+                     attachmentsPattern: '**/*',
+                     mimeType: 'text/plain',
+                     replyTo: 'swanhtetnaingatwork@gmail.com',
+                     from: 'swanhtetnaingatwork@gmail.com',
+                     mailer: [
+                        smtpHost: 'smtp.gmail.com',
+                        smtpPort: '465',
+                        ssl: true,
+                        smtpAuth: true,
+                        smtpUser: 'swanhtetnaingatwork@gmail.com',
+                        smtpPassword: 'uaaz tlrt hsra zkze'
+                     ]
         }
     }
 }
