@@ -57,7 +57,7 @@ pipeline {
                      mimeType: 'text/plain',
                      replyTo: 'swanhtetnaingatwork@gmail.com',
                      from: 'swanhtetnaingatwork@gmail.com',
-                     mailer: [
+                     subject: [
                         smtpHost: 'smtp.gmail.com',
                         smtpPort: '587',
                         ssl: true,
@@ -74,7 +74,7 @@ pipeline {
                      mimeType: 'text/plain',
                      replyTo: 'swanhtetnaingatwork@gmail.com',
                      from: 'swanhtetnaingatwork@gmail.com',
-                     mailer: [
+                     subject: [
                         smtpHost: 'smtp.gmail.com',
                         smtpPort: '465',
                         ssl: true,
